@@ -1,0 +1,170 @@
+
+body, html {
+  height: 100%;
+  margin: 0;
+  background-color: antiquewhite;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("C:/Users/JEEL JAIN/Desktop/Html_Assignment_1/banner.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.service-text {
+    font-size: 1.5em;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.column {
+    float: left;
+    width: 33%;
+    height: 300px;
+    /* Should be removed. Only for demonstration */
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row {
+    margin-top: 2%;
+}
+
+.square-1 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 470px;
+    height: 280px;
+    
+    background-repeat: no-repeat;
+}
+
+.square-2 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 470px;
+    height: 280px;
+    
+    background-repeat: no-repeat;
+}
+
+.square-3 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 470px;
+    height: 280px;
+  
+    background-repeat: no-repeat;
+}
+
+.read-btn {
+    padding: 12px 20px;
+    margin-top: -7%;
+    font-size: 18px;
+    color: white;
+    background-color: #E63946;
+    border : none;
+    /*border: 2px solid white;*/
+    /* border */
+}
+
+.read-btn:hover {
+    color: black;
+/*    border: 2px solid red;*/
+    background-color: white;
+}
+
+.hero-text {
+  text-align: left;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-text button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color: #ddd;
+  text-align: left;
+  cursor: pointer;
+}
+
+.hero-text button:hover {
+  background-color: #555;
+  color: white;
+}
+
+/* Footer Css */
+
+.footer
+{
+
+  background: #011627;
+  color: white;
+  height: 200px;
+  position: relative;
+}
+.footer .footer-bottom 
+{
+
+  background: #ededed ;
+  color: black;
+  height: 50px;
+  text-align: center !important;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding-top: 20px;
+}
+
+.footer .footer-content{
+  border: 1px solid red
+  height:350px;
+  display: flex;
+}
+
+.footer .footer-content .footer-section
+{
+  flex: 1;
+  padding: 20px;
+  
+}
+
+
+.column-logo {
+    float: left;
+    width: 16%;
+    /* height: 300px; */
+}
+
+.row-logo {
+    padding-top: 3%;
+}
+
+.row-logo:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.col-logo-box1, .col-logo-box2, .col-logo-box3, .col-logo-box4, .col-logo-box5, .col-logo-box6{
+  
+    height: 200px;
+
+   /* background-color: rgb(80, 80, 80);*/
+    /* border: 2px solid red; */
+}
