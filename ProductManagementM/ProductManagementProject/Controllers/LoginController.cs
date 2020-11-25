@@ -10,7 +10,7 @@ namespace ProductManagementProject.Controllers
     public class LoginController : Controller
     {
         ProductEntities1 dbObj2 = new ProductEntities1();
-        // GET: Login
+        // GET: Login//
         public ActionResult Login()
         {
             return View();
