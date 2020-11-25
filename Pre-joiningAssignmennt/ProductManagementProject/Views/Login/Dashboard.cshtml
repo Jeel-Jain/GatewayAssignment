@@ -1,0 +1,58 @@
+﻿@model ProductManagementProject.Context.tbl_user
+@{
+    ViewBag.Title = "Dashboard";
+}
+
+
+<style>
+
+
+    .sidenav {
+        height: 100%;
+        width: 160px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+
+    .sidenav a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+    }
+
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+
+    .main {
+        margin-left: 160px; /* Same as the width of the sidenav */
+        padding: 0px 10px;
+    }
+
+    .custom__main {
+        vertical-align: middle;
+    }
+</style>
+
+<div class="page-container">
+    <div class="page-wrapper">
+        <div class="sidenav custom__sidebar">
+            @Html.ActionLink("Add Product", "ProductPage", "Product")
+            @Html.ActionLink("Product List", "ProductList", "Product")
+
+        </div>
+        <div class="main custom__main">
+            <div>
+                <h1 align="center">Welcome @Session["Username"] </h1>
+
+            </div>
+        </div>
+    </div>
+</div>
