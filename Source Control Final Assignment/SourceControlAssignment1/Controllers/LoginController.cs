@@ -25,7 +25,9 @@ namespace SourceControlAssignment1.Controllers
                 return View(obj);
             }
             catch(Exception e)
+
             {
+                logger.Error("Error: " + e);
                 throw new Exception("Error: "+e);
             }
            
