@@ -27,5 +27,18 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="NLogs">
+      <EntityTypeMapping TypeName="ProductModel.NLog">
+        <MappingFragment StoreEntitySet="NLog">
+          <ScalarProperty Name="exception" ColumnName="exception" />
+          <ScalarProperty Name="Callsite" ColumnName="Callsite" />
+          <ScalarProperty Name="message" ColumnName="message" />
+          <ScalarProperty Name="logger" ColumnName="logger" />
+          <ScalarProperty Name="level" ColumnName="level" />
+          <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

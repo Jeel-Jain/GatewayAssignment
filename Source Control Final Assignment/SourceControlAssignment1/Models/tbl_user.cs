@@ -11,29 +11,13 @@ namespace SourceControlAssignment1.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Web;
-
+    
     public partial class tbl_user
     {
-
         public long Id { get; set; }
-
-        [Required]
         public string Name { get; set; }
-
-       [Required]
-       [EmailAddress]
         public string Email { get; set; }
-       [Required]
-       [MinLength(4)]
         public string Password { get; set; }
-       [Required]
-       [MinLength(10)]
         public string Mobile { get; set; }
-      
-
-       
-        
     }
 }

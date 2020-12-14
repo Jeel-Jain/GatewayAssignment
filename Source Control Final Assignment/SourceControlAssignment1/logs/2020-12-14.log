@@ -31,3 +31,17 @@
   Content-Type: application/json; charset=utf-8
   Expires: -1
 }
+2020-12-14 16:34:33.7143 INFO Validating the User in Login Controller
+2020-12-14 16:34:33.9936 INFO Log in successfull
+2020-12-14 20:01:01.7346 INFO Validating the User in Login Controller
+2020-12-14 20:01:02.3546 INFO Log in successfull
+2020-12-14 20:12:48.5724 INFO Validating the User in Login Controller
+2020-12-14 20:13:03.7904 INFO Log in successfull
+2020-12-14 20:13:24.7214 INFO Validating the User in Login Controller
+2020-12-14 20:13:39.2652 INFO Invalid Username or Password
+2020-12-14 20:14:11.1097 INFO Validating the User in Login Controller
+2020-12-14 20:14:11.1207 INFO Invalid Username or Password
+2020-12-14 20:14:48.6971 INFO Validating the User in Login Controller
+2020-12-14 20:15:03.7644 INFO Invalid Username or Password
+2020-12-14 20:18:13.7542 INFO Validating the User in Login Controller
+2020-12-14 20:18:28.6908 INFO Invalid Username or Password

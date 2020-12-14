@@ -27,5 +27,6 @@ namespace SourceControlAssignment1.Models
     
         public virtual DbSet<tbl_product> tbl_product { get; set; }
         public virtual DbSet<tbl_user> tbl_user { get; set; }
+        public virtual DbSet<NLog> NLogs { get; set; }
     }
 }

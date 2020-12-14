@@ -5,6 +5,18 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="ProductModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="NLog">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="timestamp" Type="datetime" Nullable="false" />
+          <Property Name="level" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="logger" Type="varchar" MaxLength="1000" Nullable="false" />
+          <Property Name="message" Type="varchar" MaxLength="3600" Nullable="false" />
+          <Property Name="Callsite" Type="varchar" MaxLength="3600" />
+          <Property Name="exception" Type="varchar" MaxLength="3600" />
+        </EntityType>
         <EntityType Name="tbl_product">
           <Key>
             <PropertyRef Name="Id" />
@@ -30,6 +42,7 @@
           <Property Name="Mobile" Type="nvarchar(max)" />
         </EntityType>
         <EntityContainer Name="ProductModelStoreContainer">
+          <EntitySet Name="NLog" EntityType="Self.NLog" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_product" EntityType="Self.tbl_product" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_user" EntityType="Self.tbl_user" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
@@ -54,6 +67,7 @@
         <EntityContainer Name="ProductEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="tbl_product" EntityType="Self.tbl_product" />
           <EntitySet Name="tbl_user" EntityType="ProductModel.tbl_user" />
+          <EntitySet Name="NLogs" EntityType="ProductModel.NLog" />
         </EntityContainer>
         <EntityType Name="tbl_user">
           <Key>
@@ -64,6 +78,18 @@
           <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Mobile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="NLog">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="timestamp" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="level" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="logger" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="message" Type="String" Nullable="false" MaxLength="3600" FixedLength="false" Unicode="false" />
+          <Property Name="Callsite" Type="String" MaxLength="3600" FixedLength="false" Unicode="false" />
+          <Property Name="exception" Type="String" MaxLength="3600" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -94,6 +120,19 @@
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NLogs">
+            <EntityTypeMapping TypeName="ProductModel.NLog">
+              <MappingFragment StoreEntitySet="NLog">
+                <ScalarProperty Name="exception" ColumnName="exception" />
+                <ScalarProperty Name="Callsite" ColumnName="Callsite" />
+                <ScalarProperty Name="message" ColumnName="message" />
+                <ScalarProperty Name="logger" ColumnName="logger" />
+                <ScalarProperty Name="level" ColumnName="level" />
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -10,7 +10,8 @@ namespace SourceControlAssignment1.Controllers
 {
     public class LoginController : Controller
     {
-        private static Logger logger = LogManager.GetLogger("myAppLoggerRule");
+
+        private static Logger logger = LogManager.GetCurrentClassLogger();
         ProductEntities1 dbObj2 = new ProductEntities1();
         // GET: Login
         public ActionResult Login()
@@ -19,7 +20,15 @@ namespace SourceControlAssignment1.Controllers
         }
         public ActionResult Dashboard(tbl_user obj)
         {
-            return View(obj);
+            try
+            {
+                return View(obj);
+            }
+            catch(Exception e)
+            {
+                throw new Exception("Error: "+e);
+            }
+           
         }
         public ActionResult IsValid(tbl_user model)
         {
@@ -38,7 +47,7 @@ namespace SourceControlAssignment1.Controllers
                 else
                 {
                     logger.Info("Invalid Username or Password");
-
+                    throw new Exception("Invalid Username or Password");
                     return View("Login");
 
                 }

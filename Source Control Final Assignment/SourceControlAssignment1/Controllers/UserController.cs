@@ -13,7 +13,8 @@ namespace SourceControlAssignment1.Controllers
     {
         ProductEntities1 dbObj = new ProductEntities1();
 
-        private static Logger logger = LogManager.GetLogger("myAppLoggerRule");
+       
+        private static Logger logger = LogManager.GetCurrentClassLogger();
 
         // GET: User
         public ActionResult User()
@@ -38,7 +39,9 @@ namespace SourceControlAssignment1.Controllers
             }
             catch(Exception e)
             {
+               
                 logger.Error("Error:"+e.Message);
+                throw e;
                 return Content("Something Went Wrong");
             }
            
