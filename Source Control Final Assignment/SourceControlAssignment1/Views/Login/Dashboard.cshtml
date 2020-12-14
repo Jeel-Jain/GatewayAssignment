@@ -47,11 +47,11 @@
         <div class="main custom__main">
             <div>
                 <h1 align="center">Welcome @Session["Username"] </h1>
-
-                Name : @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
-                Email : @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
-                Mobile No : @Html.TextBoxFor(x => x.Mobile, new { @class = "form-control" })
-               
+                <center>
+                    <h2> Name :  @Model.Name </h2>
+                    <h2> Email : @Model.Email </h2>
+                   <h2> Mobile No :  @Model.Name</h2>
+                </center>
             </div>
         </div>
     </div>

@@ -1,4 +1,5 @@
-﻿using SourceControlAssignment1.Models;
+﻿using NLog;
+using SourceControlAssignment1.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,11 +13,12 @@ namespace SourceControlAssignment1.Controllers
     {
         ProductEntities1 dbObj = new ProductEntities1();
 
-      
+        private static Logger logger = LogManager.GetLogger("myAppLoggerRule");
 
         // GET: User
         public ActionResult User()
         {
+            logger.Info("Inside User Controller");
             return View();
         }
 
@@ -24,9 +26,22 @@ namespace SourceControlAssignment1.Controllers
         [HandleError]
         public ActionResult Add(tbl_user model)
         {
-            HttpResponseMessage response = GlobleVariables.WebApiClient.PostAsJsonAsync("User", model).Result;
-            TempData["successMesg"] = "Registration  Successfully";
-            return RedirectToAction("Login", "Login", new { area = "" });
+            try
+            {
+                logger.Info("Adding Data");
+                HttpResponseMessage response = GlobleVariables.WebApiClient.PostAsJsonAsync("User", model).Result;
+
+                TempData["successMesg"] = "Registration  Successfully";
+                logger.Info("Registration  Successfully");
+                return RedirectToAction("Login", "Login", new { area = "" });
+
+            }
+            catch(Exception e)
+            {
+                logger.Error("Error:"+e.Message);
+                return Content("Something Went Wrong");
+            }
+           
 
         }
 
