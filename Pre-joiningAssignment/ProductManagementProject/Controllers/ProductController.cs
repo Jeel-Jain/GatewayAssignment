@@ -20,8 +20,10 @@ namespace ProductManagementProject.Controllers
           
             HttpResponseMessage response = GlobalVariables.WebApiClient.GetAsync("Product").Result;
 
-            //return var res = dbObj2.tbl_product.ToList();
+            //var res = dbObj2.tbl_product.ToList();
             productlist = response.Content.ReadAsAsync<IEnumerable<tbl_product>>().Result;
+
+
             return View(productlist);
         }
 
