@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbl_hotel">
+    <Key>
+      <PropertyRef Name="hid" />
+    </Key>
+    <Property Name="hid" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="hotelName" Type="nvarchar(max)" />
+    <Property Name="address" Type="nvarchar(max)" />
+    <Property Name="city" Type="nvarchar(max)" />
+    <Property Name="pincode" Type="nvarchar(max)" />
+    <Property Name="contactNumber" Type="bigint" />
+    <Property Name="contactPerson" Type="nvarchar" MaxLength="50" />
+    <Property Name="website" Type="nvarchar(max)" />
+    <Property Name="facebook" Type="nvarchar(max)" />
+    <Property Name="Twitter" Type="nvarchar(max)" />
+    <Property Name="isActive" Type="nvarchar(max)" />
+    <Property Name="createDate" Type="datetime" />
+    <Property Name="createdBy" Type="nvarchar(max)" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="updatedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="HMModelStoreContainer">
+    <EntitySet Name="tbl_hotel" EntityType="Self.tbl_hotel" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
