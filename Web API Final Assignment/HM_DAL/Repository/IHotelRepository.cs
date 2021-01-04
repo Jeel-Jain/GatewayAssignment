@@ -16,6 +16,12 @@ namespace HM_DAL.Repository
 
         String createHotel(Hotel model);
 
+        String createRoom(Room model);
+
+        String bookRoom(Booking model);
+
+        List<Booking> checkBooking(Booking model);
+
         String updateHotel(Hotel model);
 
         String deleteHotel(int id);

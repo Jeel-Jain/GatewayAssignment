@@ -1,5 +1,6 @@
 ﻿using HM_BAL.Interface;
 using HM_Model;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,8 @@ namespace HMWebApi.Controllers
         }
 
         // GET: api/Booking
-        public List<Hotel> Get()
+        
+        public List<Hotel> GetHotels()
         {
 
             var hotel=_IHotelManager.GetAllHotels();
@@ -27,16 +29,28 @@ namespace HMWebApi.Controllers
         }
 
         // GET: api/Booking/5
-        public string Get(int id)
+        public HttpResponseMessage GetHotelById(int id)
         {
-            return "value";
+            var hotel = _IHotelManager.GetHotel(id);
+            return Request.CreateResponse<Hotel> (HttpStatusCode.OK, hotel);
         }
 
         // POST: api/Booking
-        public void Post([FromBody]string value)
+        public string createHotel([FromBody]Hotel model)
         {
+            return _IHotelManager.createHotel(model);
         }
 
+        // POST: api/Booking
+        
+        public string createRoom([FromBody] Room model)
+        {
+            return _IHotelManager.createRoom(model);
+        }
+        public string bookRoom([FromBody] Booking model)
+        {
+            return _IHotelManager.bookRoom(model);
+        }
         // PUT: api/Booking/5
         public void Put(int id, [FromBody]string value)
         {
@@ -46,5 +60,17 @@ namespace HMWebApi.Controllers
         public void Delete(int id)
         { 
         }
+
+        public List<Booking> checkAvailability([FromBody] Booking model)
+        {
+
+            var booking = _IHotelManager.checkBooking(model);
+
+            return booking;
+
+            // Your Code goes here
+        }
+
+
     }
 }

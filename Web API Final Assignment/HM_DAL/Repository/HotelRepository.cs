@@ -16,9 +16,146 @@ namespace HM_DAL.Repository
         {
             dbContext = new Database.HMEntities();
         }
+
+        public string bookRoom(Booking model)
+        {
+            try
+            {
+                if (model != null)
+                {
+
+
+                    
+                    Database.tbl_booking book = new Database.tbl_booking();
+
+                    book.bookingDate = model.bookingDate;
+                    book.roomid = model.roomid;
+                    book.statusOfBooking = "Definitive";
+                    book.hotelid = model.hotelid;
+
+                                     
+                    dbContext.tbl_booking.Add(book);
+                    dbContext.SaveChanges();
+                    return "Booked Successfully.";
+                }
+                return "Model is Null.";
+
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+
+
+        public List<Booking> checkBooking(Booking model)
+        {
+
+            List<Booking> bookingDetails = new List<Booking>();
+
+            var entityy = dbContext.tbl_booking.Where(x=>x.bookingDate==model.bookingDate);
+            foreach (var item in entityy)
+            {
+
+
+
+                Booking book = new Booking();
+                book.roomid = item.roomid;
+                book.hotelid = item.hotelid;
+                book.bookingId = item.bookingId;
+                book.bookingDate = item.bookingDate;
+                if(item.statusOfBooking== "Definitive")
+                {
+                    book.statusOfBooking = "False";
+                }
+                else 
+                {
+                    book.statusOfBooking = "True";
+                }
+                
+
+                bookingDetails.Add(book);
+
+                
+            }
+            return bookingDetails;
+        }
+
         public string createHotel(Hotel model)
         {
-            throw new NotImplementedException();
+            try
+            {
+                if (model != null)
+                {
+
+
+                    Database.tbl_hotel entities = new Database.tbl_hotel();
+
+                    entities.hotelName = model.hotelName;
+                    entities.address = model.address;
+                    entities.city = model.city;
+                    entities.pincode = model.pincode;
+                    entities.contactPerson = model.contactPerson;
+                    entities.contactNumber = model.contactNumber;
+                    entities.createdBy = model.createdBy;
+                    entities.createDate = DateTime.Now;
+                    entities.updatedBy = model.updatedBy;
+                    entities.updateDate = DateTime.Now;
+                    entities.facebook = model.facebook;
+                    entities.Twitter = model.Twitter;
+                    entities.isActive = "0";
+                    entities.website = model.website;
+
+
+                    dbContext.tbl_hotel.Add(entities);
+                    dbContext.SaveChanges();
+                    return "Data Submitted Successfully.";
+                }
+                return "Model is Null.";
+
+            }
+            catch(Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+
+        public string createRoom(Room model)
+        {
+            try
+            {
+                if (model != null)
+                {
+
+
+                    Database.tbl_room entities = new Database.tbl_room();
+                   
+
+                    entities.hotelid = model.hotelid;
+                    entities.category = model.category;
+                    entities.price = model.price;
+                    entities.createdBy = model.createdBy;
+                    entities.createdDate = DateTime.Now;
+                    entities.updatedBy = model.updatedBy;
+                    entities.updateDate =DateTime.Now;
+                    entities.roomName = model.roomName;
+                    entities.isActive = 0;
+                                      
+
+                  
+
+                    dbContext.tbl_room.Add(entities);
+                  
+                    dbContext.SaveChanges();
+                    return "Room Booked Successfully.";
+                }
+                return "Model is Null.";
+
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
         }
 
         public string deleteHotel(int id)
@@ -77,7 +214,37 @@ namespace HM_DAL.Repository
 
         public Hotel GetHotel(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var entity = dbContext.tbl_hotel.Find(id);
+                 if(entity!=null)
+                {
+                    Hotel hotel = new Hotel();
+                    hotel.hid = entity.hid;
+                    hotel.hotelName = entity.hotelName;
+                    hotel.address = entity.address;
+                    hotel.city = entity.city;
+                    hotel.pincode = entity.pincode;
+                    hotel.contactPerson = entity.contactPerson;
+                    hotel.contactNumber = entity.contactNumber;
+                    hotel.createdBy = entity.createdBy;
+                    hotel.createDate = entity.createDate;
+                    hotel.updatedBy = entity.updatedBy;
+                    hotel.updateDate = entity.updateDate;
+                    hotel.facebook = entity.facebook;
+                    hotel.Twitter = entity.Twitter;
+                    hotel.isActive = entity.isActive;
+                    hotel.website = entity.website;
+
+                    return hotel;
+                }
+                return null;
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+      
         }
 
         public string updateHotel(Hotel model)

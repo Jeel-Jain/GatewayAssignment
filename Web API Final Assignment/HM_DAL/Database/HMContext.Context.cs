@@ -26,5 +26,7 @@ namespace HM_DAL.Database
         }
     
         public virtual DbSet<tbl_hotel> tbl_hotel { get; set; }
+        public virtual DbSet<tbl_room> tbl_room { get; set; }
+        public virtual DbSet<tbl_booking> tbl_booking { get; set; }
     }
 }

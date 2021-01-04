@@ -22,5 +22,32 @@
   </EntityType>
   <EntityContainer Name="HMEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="tbl_hotel" EntityType="Self.tbl_hotel" />
+    <EntitySet Name="tbl_room" EntityType="HMModel.tbl_room" />
+    <EntitySet Name="tbl_booking" EntityType="HMModel.tbl_booking" />
   </EntityContainer>
+  <EntityType Name="tbl_room">
+    <Key>
+      <PropertyRef Name="rid" />
+    </Key>
+    <Property Name="rid" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="hotelid" Type="Int64" />
+    <Property Name="roomName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="price" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="isActive" Type="Int64" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="createdBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="updateDate" Type="DateTime" Precision="3" />
+    <Property Name="updatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_booking">
+    <Key>
+      <PropertyRef Name="bookingId" />
+    </Key>
+    <Property Name="bookingId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="hotelid" Type="Int64" />
+    <Property Name="roomid" Type="Int64" />
+    <Property Name="statusOfBooking" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="bookingDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>
