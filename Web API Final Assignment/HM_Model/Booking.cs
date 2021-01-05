@@ -13,5 +13,6 @@ namespace HM_Model
         public string statusOfBooking { get; set; }
         public string bookingDate { get; set; }
         public Nullable<long> hotelid { get; set; }
+        public Nullable<int> isActive { get; set; }
     }
 }

@@ -9,6 +9,7 @@
     <Property Name="roomid" Type="bigint" />
     <Property Name="statusOfBooking" Type="nvarchar" MaxLength="50" />
     <Property Name="bookingDate" Type="nvarchar(max)" />
+    <Property Name="isActive" Type="int" />
   </EntityType>
   <EntityType Name="tbl_hotel">
     <Key>

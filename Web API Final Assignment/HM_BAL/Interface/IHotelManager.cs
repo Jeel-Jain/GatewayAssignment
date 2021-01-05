@@ -21,8 +21,13 @@ namespace HM_BAL.Interface
 
         List<Booking> checkBooking(Booking model);
 
+        String UpdateBookingdate(Booking model);
+        String UpdateBookingStatus(Booking model);
+       
         String updateHotel(Hotel model);
 
         String deleteHotel(int id);
+
+        String deleteBooking(int id);
     }
 }

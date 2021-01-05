@@ -24,14 +24,20 @@ namespace HM_DAL.Repository
                 if (model != null)
                 {
 
+                    var entity = dbContext.tbl_room.Find(model.roomid);
 
-                    
+
+                    Database.tbl_room room = new Database.tbl_room();
+
                     Database.tbl_booking book = new Database.tbl_booking();
 
                     book.bookingDate = model.bookingDate;
                     book.roomid = model.roomid;
                     book.statusOfBooking = "Definitive";
                     book.hotelid = model.hotelid;
+                    book.isActive = 0;
+
+                    entity.isActive = 1;
 
                                      
                     dbContext.tbl_booking.Add(book);
@@ -53,7 +59,13 @@ namespace HM_DAL.Repository
 
             List<Booking> bookingDetails = new List<Booking>();
 
-            var entityy = dbContext.tbl_booking.Where(x=>x.bookingDate==model.bookingDate);
+            var entityy = dbContext.tbl_booking.Where(x=>x.bookingDate==model.bookingDate & x.isActive==1);
+
+         
+            if(entityy!=null)
+            {
+
+            
             foreach (var item in entityy)
             {
 
@@ -64,13 +76,14 @@ namespace HM_DAL.Repository
                 book.hotelid = item.hotelid;
                 book.bookingId = item.bookingId;
                 book.bookingDate = item.bookingDate;
-                if(item.statusOfBooking== "Definitive")
+                book.isActive = item.isActive;
+                if(item.statusOfBooking!= "Definitive")
                 {
-                    book.statusOfBooking = "False";
+                    book.statusOfBooking = "True";
                 }
                 else 
                 {
-                    book.statusOfBooking = "True";
+                    book.statusOfBooking = "False";
                 }
                 
 
@@ -78,7 +91,16 @@ namespace HM_DAL.Repository
 
                 
             }
+            if(bookingDetails.Count==0)
+                {
+                    return null;
+                }
             return bookingDetails;
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public string createHotel(Hotel model)
@@ -156,6 +178,27 @@ namespace HM_DAL.Repository
             {
                 return ex.Message;
             }
+        }
+
+        public string deleteBooking(int id)
+        {
+            var entity = dbContext.tbl_booking.Find(id);
+
+            var entity2 = dbContext.tbl_room.Find(entity.roomid);
+            
+            if (entity != null)
+            {
+                entity.isActive = 1;
+                entity.statusOfBooking = "Deleted";
+                entity2.isActive = 0;
+                dbContext.SaveChanges();
+                return "Deleted Successfully.";
+            }
+            else
+            {
+                return "Null";
+            }
+           
         }
 
         public string deleteHotel(int id)
@@ -245,6 +288,36 @@ namespace HM_DAL.Repository
                 throw ex;
             }
       
+        }
+
+        public string UpdateBookingdate(Booking model)
+        {
+            var entity = dbContext.tbl_booking.Find(model.bookingId);
+
+            if(entity!=null)
+            {
+                entity.bookingDate = model.bookingDate;
+                dbContext.SaveChanges();
+                return "Updated Successfully.";
+            }
+            
+            return "Something went wrong";
+
+
+        }
+
+        public string UpdateBookingStatus(Booking model)
+        {
+            var entity = dbContext.tbl_booking.Find(model.bookingId);
+
+            if (entity != null)
+            {
+                entity.statusOfBooking = model.statusOfBooking;
+                dbContext.SaveChanges();
+                return "Status Updated Successfully.";
+            }
+
+            return "Something went wrong";
         }
 
         public string updateHotel(Hotel model)

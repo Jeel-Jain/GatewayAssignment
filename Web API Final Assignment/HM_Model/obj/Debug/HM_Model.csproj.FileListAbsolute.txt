@@ -15,3 +15,20 @@ C:\Users\JEEL JAIN\source\repos\HMWebApi\HM_Model\bin\Debug\EntityFramework.SqlS
 C:\Users\JEEL JAIN\source\repos\HMWebApi\HM_Model\obj\Debug\HM_Model.csproj.CopyComplete
 C:\Users\JEEL JAIN\source\repos\HMWebApi\HM_Model\bin\Debug\AutoMapper.dll
 C:\Users\JEEL JAIN\source\repos\HMWebApi\HM_Model\bin\Debug\AutoMapper.xml
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_Model\bin\Debug\HM_Model.dll.config
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_Model\bin\Debug\HM_Model.dll
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_Model\bin\Debug\HM_Model.pdb
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_Model\bin\Debug\AutoMapper.dll
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_Model\bin\Debug\EntityFramework.dll
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_Model\bin\Debug\EntityFramework.SqlServerCompact.dll
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_Model\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_Model\bin\Debug\AutoMapper.xml
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_Model\bin\Debug\EntityFramework.xml
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_Model\bin\Debug\EntityFramework.SqlServerCompact.xml
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_Model\obj\Debug\HM_Model.csprojAssemblyReference.cache
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_Model\obj\Debug\HM_Model.csproj.CoreCompileInputs.cache
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_Model\obj\Debug\HM_Model.csproj.CopyComplete
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_Model\obj\Debug\HM_Model.dll
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_Model\obj\Debug\HM_Model.pdb

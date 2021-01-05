@@ -14,6 +14,7 @@
           <Property Name="roomid" Type="bigint" />
           <Property Name="statusOfBooking" Type="nvarchar" MaxLength="50" />
           <Property Name="bookingDate" Type="nvarchar(max)" />
+          <Property Name="isActive" Type="int" />
         </EntityType>
         <EntityType Name="tbl_hotel">
           <Key>
@@ -108,6 +109,7 @@
           <Property Name="roomid" Type="Int64" />
           <Property Name="statusOfBooking" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="bookingDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="isActive" Type="Int32" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -155,6 +157,7 @@
           <EntitySetMapping Name="tbl_booking">
             <EntityTypeMapping TypeName="HMModel.tbl_booking">
               <MappingFragment StoreEntitySet="tbl_booking">
+                <ScalarProperty Name="isActive" ColumnName="isActive" />
                 <ScalarProperty Name="bookingDate" ColumnName="bookingDate" />
                 <ScalarProperty Name="statusOfBooking" ColumnName="statusOfBooking" />
                 <ScalarProperty Name="roomid" ColumnName="roomid" />

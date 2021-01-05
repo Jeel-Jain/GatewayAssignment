@@ -38,6 +38,11 @@ namespace HM_BAL
             return _hotelRepository.createRoom(model);
         }
 
+        public string deleteBooking(int id)
+        {
+            return _hotelRepository.deleteBooking(id);
+        }
+
         public string deleteHotel(int id)
         {
             throw new NotImplementedException();
@@ -61,6 +66,16 @@ namespace HM_BAL
             var hotel = _hotelRepository.GetHotel(id);
 
             return hotel;
+        }
+
+        public string UpdateBookingdate(Booking model)
+        {
+            return _hotelRepository.UpdateBookingdate(model);
+        }
+
+        public string UpdateBookingStatus(Booking model)
+        {
+            return _hotelRepository.UpdateBookingStatus(model);
         }
 
         public string updateHotel(Hotel model)

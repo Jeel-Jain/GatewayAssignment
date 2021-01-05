@@ -19,5 +19,6 @@ namespace HM_DAL.Database
         public Nullable<long> roomid { get; set; }
         public string statusOfBooking { get; set; }
         public string bookingDate { get; set; }
+        public Nullable<int> isActive { get; set; }
     }
 }

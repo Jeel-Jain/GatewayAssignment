@@ -51,14 +51,24 @@ namespace HMWebApi.Controllers
         {
             return _IHotelManager.bookRoom(model);
         }
+
+        [HttpPut    ]
         // PUT: api/Booking/5
-        public void Put(int id, [FromBody]string value)
+        public String UpdateBookingDate([FromBody]Booking model)
         {
+            return _IHotelManager.UpdateBookingdate(model);
+        }
+
+        [HttpPut]
+        public String UpdateBookingStatus([FromBody] Booking model)
+        {
+            return _IHotelManager.UpdateBookingStatus(model);
         }
 
         // DELETE: api/Booking/5
-        public void Delete(int id)
-        { 
+        public String DeleteBooking(int id)
+        {
+            return _IHotelManager.deleteBooking(id);
         }
 
         public List<Booking> checkAvailability([FromBody] Booking model)

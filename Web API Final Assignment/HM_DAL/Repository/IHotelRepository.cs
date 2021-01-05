@@ -24,6 +24,12 @@ namespace HM_DAL.Repository
 
         String updateHotel(Hotel model);
 
+        String deleteBooking(int id);
+
         String deleteHotel(int id);
+
+        String UpdateBookingdate(Booking model);
+
+        String UpdateBookingStatus(Booking model);
     }
 }

@@ -41,6 +41,7 @@
     <EntitySetMapping Name="tbl_booking">
       <EntityTypeMapping TypeName="HMModel.tbl_booking">
         <MappingFragment StoreEntitySet="tbl_booking">
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
           <ScalarProperty Name="bookingDate" ColumnName="bookingDate" />
           <ScalarProperty Name="statusOfBooking" ColumnName="statusOfBooking" />
           <ScalarProperty Name="roomid" ColumnName="roomid" />

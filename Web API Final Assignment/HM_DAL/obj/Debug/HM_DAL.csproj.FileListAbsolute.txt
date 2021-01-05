@@ -31,3 +31,36 @@ C:\Users\JEEL JAIN\source\repos\HMWebApi\HM_DAL\bin\Debug\System.Web.Razor.xml
 C:\Users\JEEL JAIN\source\repos\HMWebApi\HM_DAL\bin\Debug\System.Web.WebPages.xml
 C:\Users\JEEL JAIN\source\repos\HMWebApi\HM_DAL\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\Users\JEEL JAIN\source\repos\HMWebApi\HM_DAL\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_DAL\bin\Debug\HM_DAL.dll.config
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_DAL\bin\Debug\HM_DAL.dll
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_DAL\bin\Debug\HM_DAL.pdb
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_DAL\bin\Debug\AutoMapper.dll
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_DAL\bin\Debug\EntityFramework.dll
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_DAL\bin\Debug\EntityFramework.SqlServerCompact.dll
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_DAL\bin\Debug\HM_Model.dll
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_DAL\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_DAL\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_DAL\bin\Debug\System.Web.Helpers.dll
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_DAL\bin\Debug\System.Web.Mvc.dll
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_DAL\bin\Debug\System.Web.Razor.dll
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_DAL\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_DAL\bin\Debug\System.Web.WebPages.dll
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_DAL\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_DAL\bin\Debug\HM_Model.pdb
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_DAL\bin\Debug\HM_Model.dll.config
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_DAL\bin\Debug\AutoMapper.xml
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_DAL\bin\Debug\EntityFramework.xml
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_DAL\bin\Debug\EntityFramework.SqlServerCompact.xml
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_DAL\bin\Debug\System.Web.Helpers.xml
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_DAL\bin\Debug\System.Web.Mvc.xml
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_DAL\bin\Debug\System.Web.Razor.xml
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_DAL\bin\Debug\System.Web.WebPages.xml
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_DAL\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_DAL\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_DAL\obj\Debug\HM_DAL.csprojAssemblyReference.cache
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_DAL\obj\Debug\HM_DAL.csproj.CoreCompileInputs.cache
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_DAL\obj\Debug\HM_DAL.csproj.CopyComplete
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_DAL\obj\Debug\HM_DAL.dll
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_DAL\obj\Debug\HM_DAL.pdb

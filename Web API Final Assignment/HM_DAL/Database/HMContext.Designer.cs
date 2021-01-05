@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\JEEL JAIN\source\repos\HMWebApi\HM_DAL\Database\HMContext.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_DAL\Database\HMContext.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
