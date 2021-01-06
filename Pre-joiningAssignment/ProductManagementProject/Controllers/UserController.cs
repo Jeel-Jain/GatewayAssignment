@@ -17,6 +17,8 @@ namespace ProductManagementProject.Controllers
             return View();
         }
 
+        //Insert User Data To Database --Registration
+
         [HttpPost]
         public ActionResult Add(tbl_user model)
         {

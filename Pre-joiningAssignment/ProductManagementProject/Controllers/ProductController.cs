@@ -15,6 +15,8 @@ namespace ProductManagementProject.Controllers
     {
         IEnumerable<tbl_product> productlist;
         ProductEntities1 dbObj2 = new ProductEntities1(); 
+
+        //Fetch Product Details Using Api 
         public ActionResult ProductList()
         {
           
@@ -27,6 +29,7 @@ namespace ProductManagementProject.Controllers
             return View(productlist);
         }
 
+        //Delete Product By Id
         public ActionResult DeleteProduct(int id)
         {
             //var res = dbObj2.tbl_product.Where(x => x.Id == id).First();
@@ -44,7 +47,7 @@ namespace ProductManagementProject.Controllers
            
         }
       
-
+        //Insert Product Data
         [HttpPost]
         public ActionResult AddProduct(tbl_product model)
         {
@@ -101,6 +104,7 @@ namespace ProductManagementProject.Controllers
           
         }
 
+        //Form for Updating Product Details
         public ActionResult ProductPage(tbl_product obj)
 
         {

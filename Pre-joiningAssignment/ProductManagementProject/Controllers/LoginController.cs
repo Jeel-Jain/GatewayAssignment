@@ -20,6 +20,8 @@ namespace ProductManagementProject.Controllers
         { 
             return View(obj);
         }
+
+        //Check User Credentials in System 
         public ActionResult IsValid(tbl_user model)
         {
            
