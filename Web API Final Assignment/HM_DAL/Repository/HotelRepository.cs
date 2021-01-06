@@ -201,10 +201,7 @@ namespace HM_DAL.Repository
            
         }
 
-        public string deleteHotel(int id)
-        {
-            throw new NotImplementedException();
-        }
+      
 
         public List<Hotel> GetAllHotels()
 
@@ -320,9 +317,6 @@ namespace HM_DAL.Repository
             return "Something went wrong";
         }
 
-        public string updateHotel(Hotel model)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

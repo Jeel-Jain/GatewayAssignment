@@ -24,9 +24,7 @@ namespace HM_BAL.Interface
         String UpdateBookingdate(Booking model);
         String UpdateBookingStatus(Booking model);
        
-        String updateHotel(Hotel model);
-
-        String deleteHotel(int id);
+      
 
         String deleteBooking(int id);
     }

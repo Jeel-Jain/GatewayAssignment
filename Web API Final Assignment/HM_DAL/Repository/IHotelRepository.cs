@@ -22,11 +22,11 @@ namespace HM_DAL.Repository
 
         List<Booking> checkBooking(Booking model);
 
-        String updateHotel(Hotel model);
+     
 
         String deleteBooking(int id);
 
-        String deleteHotel(int id);
+      
 
         String UpdateBookingdate(Booking model);
 
