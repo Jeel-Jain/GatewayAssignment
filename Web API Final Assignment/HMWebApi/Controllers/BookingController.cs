@@ -81,6 +81,16 @@ namespace HMWebApi.Controllers
             // Your Code goes here
         }
 
+        [HttpPost]
+        public IQueryable getRoomsByParameters([FromBody] Hotel model)
+        {
+
+            var data= _IHotelManager.getRoomsByPara(model);
+
+            return data;
+
+        }
+
 
     }
 }

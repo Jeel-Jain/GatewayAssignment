@@ -73,6 +73,10 @@ namespace HM_BAL
             return _hotelRepository.UpdateBookingStatus(model);
         }
 
-
+        public IQueryable getRoomsByPara(Hotel model)
+        {
+            return _hotelRepository.getRoomsByPara(model);
+           
+        }
     }
 }

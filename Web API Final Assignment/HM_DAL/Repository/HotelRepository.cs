@@ -287,6 +287,34 @@ namespace HM_DAL.Repository
       
         }
 
+        public IQueryable getRoomsByPara(Hotel model)
+        {
+           
+
+           // var hotalData = dbContext.tbl_hotel.Where(x=>x.city==model.city || x.pincode==model.pincode);
+            var hotalData = from h in dbContext.tbl_hotel
+                     join r in dbContext.tbl_room on h.hid equals r.hotelid
+                    where h.city ==model.city || h.pincode==model.pincode || r.price==model.price || r.category==model.category
+                     orderby r.price
+                     select new
+                     {
+                         h.hid,
+                         r.rid,
+                         r.roomName,
+                         h.hotelName,
+                         r.category,
+                         r.price,
+                         h.pincode,
+                         h.city,
+                         
+                      };
+
+            return hotalData;
+
+
+
+        }
+
         public string UpdateBookingdate(Booking model)
         {
             var entity = dbContext.tbl_booking.Find(model.bookingId);

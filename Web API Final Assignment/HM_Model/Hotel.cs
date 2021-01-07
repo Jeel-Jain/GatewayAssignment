@@ -26,5 +26,8 @@ namespace HM_Model
         public Nullable<System.DateTime> updateDate { get; set; }
         public string updatedBy { get; set; }
 
+        public string category { get; set; }
+        public string price { get; set; }
+
     }
 }

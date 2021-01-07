@@ -22,7 +22,7 @@ namespace HM_DAL.Repository
 
         List<Booking> checkBooking(Booking model);
 
-     
+       IQueryable getRoomsByPara(Hotel model);
 
         String deleteBooking(int id);
 

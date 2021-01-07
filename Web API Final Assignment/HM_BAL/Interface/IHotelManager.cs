@@ -23,9 +23,10 @@ namespace HM_BAL.Interface
 
         String UpdateBookingdate(Booking model);
         String UpdateBookingStatus(Booking model);
-       
-      
 
+
+
+        IQueryable getRoomsByPara(Hotel model);
         String deleteBooking(int id);
     }
 }
