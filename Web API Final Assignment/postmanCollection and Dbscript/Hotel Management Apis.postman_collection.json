@@ -1,0 +1,184 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Hotel Management Apis",
+		"_postman_id": "149f62cb-848a-4be4-6bdf-d58f420c299a",
+		"description": "Apis for Hotel Management Assignmet Gateway",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://localhost:44366/api/booking",
+			"request": {
+				"url": "https://localhost:44366/api/booking/GetHotels",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": " GET all hotels sort by alphabetic order. Response: List of hotels "
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44366/api/booking",
+			"request": {
+				"url": "https://localhost:44366/api/booking/PostRoom",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"hotelid\":2,\n\t\"category\":3,\n\t\"price\":3900,\n\t\"roomName\":1003,\n\t\"createdBy\":\"HR\",\n\t\"updatedBy\":\"HR\"\n\t}"
+				},
+				"description": " POST 5-10 hotels with details of hotel and 3-5 rooms in each hotel with different price and\r\ndifferent category.\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44366/api/booking/GetHotels",
+			"request": {
+				"url": "https://localhost:44366/api/booking/GetHotelById/2",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44366/api/booking/createHotel",
+			"request": {
+				"url": "https://localhost:44366/api/booking/createHotel",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"hotelName\":\"SJ\",\n\t\"address\":\"Mumbai\",\n\t\"city\":\"Borivali\",\n\t\"pincode\":\"400065\",\n\t\"contactPerson\":\"Jeel Jain\",\n\t\"contactNumber\":\"8787845454\",\n\t\"createdBy\":\"Admin\",\n\t\"updatedBy\":\"Admin\",\n\t\"facebook\":\"sj.facebook.com\",\n\t\"Twitter\":\"sj.twitter.com\",\n\t\"website\":\"www.sj.com\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44366/api/booking/bookRoom",
+			"request": {
+				"url": "https://localhost:44366/api/booking/bookRoom",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"hotelid\":\"1\",\n\t\"bookingDate\":\"2020-04-21\",\n\t\"roomid\":\"2\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44366/api/booking/checkAvailability",
+			"request": {
+				"url": "https://localhost:44366/api/booking/checkAvailability",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"bookingDate\":\"2020-08-12\"\n}"
+				},
+				"description": " GET availability of room on some particular date (parameter), Response: should be return True\r\nFalse only"
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44366/api/booking/DeleteBooking/1",
+			"request": {
+				"url": "https://localhost:44366/api/booking/DeleteBooking/1",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44366/api/booking/UpdateBookingDate",
+			"request": {
+				"url": "https://localhost:44366/api/booking/UpdateBookingDate",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"bookingId\":1,\n\t\"bookingDate\":\"2020-09-12\"\n}"
+				},
+				"description": "PUT update booking date for any room by Id"
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44366/api/booking/UpdateBookingStatus",
+			"request": {
+				"url": "https://localhost:44366/api/booking/UpdateBookingStatus",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"bookingId\":1,\n\t\"statusOfBooking\":\"Cancelled\"\n}"
+				},
+				"description": " PUT update booking status by booking Id"
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44366/api/booking/getRoomsByParameters",
+			"request": {
+				"url": "https://localhost:44366/api/booking/getRoomsByParameters",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"city\":\"\",\n\t\"pincode\":\"\",\n\t\"price\":\"3000\",\n\t\"category\":\"3\"\n}"
+				},
+				"description": "GET all rooms of hotels with optional parameter by hotel city, pin code, Price, Category. (Default\r\nsort by price of room low to high)\r\n"
+			},
+			"response": []
+		}
+	]
+}
