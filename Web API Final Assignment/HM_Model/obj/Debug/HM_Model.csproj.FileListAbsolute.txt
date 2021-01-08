@@ -32,3 +32,5 @@ C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\H
 C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_Model\obj\Debug\HM_Model.csproj.CopyComplete
 C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_Model\obj\Debug\HM_Model.dll
 C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web API Final Assignment\HM_Model\obj\Debug\HM_Model.pdb
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web Api Final Assignment\HM_Model\bin\Debug\Newtonsoft.Json.dll
+C:\Users\JEEL JAIN\OneDrive\Desktop\GatewayAssignment\Web Api Final Assignment\HM_Model\bin\Debug\Newtonsoft.Json.xml

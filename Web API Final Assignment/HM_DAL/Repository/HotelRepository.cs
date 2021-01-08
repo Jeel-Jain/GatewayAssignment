@@ -57,50 +57,73 @@ namespace HM_DAL.Repository
         public List<Booking> checkBooking(Booking model)
         {
 
+           
+
             List<Booking> bookingDetails = new List<Booking>();
 
-            var entityy = dbContext.tbl_booking.Where(x=>x.bookingDate==model.bookingDate & x.isActive==1);
 
-         
-            if(entityy!=null)
+            var roomentity = dbContext.tbl_room.ToList();
+
+
+            if (roomentity!=null)
             {
 
             
-            foreach (var item in entityy)
+            foreach (var item in roomentity)
             {
 
 
+                    var entityy = dbContext.tbl_booking.Where(x=>x.roomid==item.rid & x.bookingDate==model.bookingDate);
+                    
+                    if(entityy.Count()!=0)
+                    {
+                        foreach (var i in entityy)
+                        {
+                            Booking book = new Booking();
+                            book.bookingId = 0;
+                            book.roomid = i.roomid;
+                            book.hotelid = i.hotelid;
+                            book.roomNumber = item.roomName;
+                           
+                            if(i.isActive==1)
+                            {
+                                book.statusOfBooking = "True";
+                            }
+                            else
+                            {
+                                book.statusOfBooking = "False";
+                            }
+                          
 
-                Booking book = new Booking();
-                book.roomid = item.roomid;
-                book.hotelid = item.hotelid;
-                book.bookingId = item.bookingId;
-                book.bookingDate = item.bookingDate;
-                book.isActive = item.isActive;
-                if(item.statusOfBooking!= "Definitive")
-                {
-                    book.statusOfBooking = "True";
+
+                            bookingDetails.Add(book);
+                         }
+                    }
+                    
+                    else
+                    {
+                        Booking book2 = new Booking();
+                        book2.roomid = item.rid;
+                        book2.hotelid = item.hotelid;
+                        book2.statusOfBooking = "True";
+                        book2.roomNumber = item.roomName;
+                        bookingDetails.Add(book2);
+                    }
+                 
+
+
                 }
-                else 
-                {
-                    book.statusOfBooking = "False";
-                }
-                
-
-                bookingDetails.Add(book);
-
-                
-            }
             if(bookingDetails.Count==0)
                 {
                     return null;
                 }
-            return bookingDetails;
+                return bookingDetails;
             }
             else
             {
                 return null;
             }
+           
         }
 
         public string createHotel(Hotel model)
@@ -245,7 +268,7 @@ namespace HM_DAL.Repository
             Hotel hotel = new Hotel
             {
                 hid = 2,
-                hotelName = "Maggit",
+                hotelName = "Gateway",
                 address = "Ahmedabad"
 
             };

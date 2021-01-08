@@ -71,6 +71,7 @@ namespace HMWebApi.Controllers
             return _IHotelManager.deleteBooking(id);
         }
 
+        [HttpPost]
         public List<Booking> checkAvailability([FromBody] Booking model)
         {
 
