@@ -237,26 +237,12 @@ namespace HM_DAL.Repository
 
             if (data!=null)
             {
-                
+                Mapper.CreateMap<Database.tbl_hotel, Hotel>();
                 foreach (var item in data)
                 {
-                    Hotel hotel = new Hotel();
-                    hotel.hid = item.hid;
-                    hotel.hotelName = item.hotelName;
-                    hotel.address = item.address;
-                    hotel.city = item.city;
-                    hotel.pincode = item.pincode;
-                    hotel.contactPerson = item.contactPerson;
-                    hotel.contactNumber = item.contactNumber;
-                    hotel.createdBy = item.createdBy;
-                    hotel.createDate = item.createDate;
-                    hotel.updatedBy = item.updatedBy;
-                    hotel.updateDate = item.updateDate;
-                    hotel.facebook = item.facebook;
-                    hotel.Twitter = item.Twitter;
-                    hotel.isActive = item.isActive;
-                    hotel.website = item.website;
 
+
+                    Hotel hotel = Mapper.Map<Hotel>(item);
                     hotelDetails.Add(hotel);
                 }
             }
@@ -279,25 +265,12 @@ namespace HM_DAL.Repository
         {
             try
             {
+                Mapper.CreateMap<Database.tbl_hotel, Hotel>();
                 var entity = dbContext.tbl_hotel.Find(id);
                  if(entity!=null)
                 {
-                    Hotel hotel = new Hotel();
-                    hotel.hid = entity.hid;
-                    hotel.hotelName = entity.hotelName;
-                    hotel.address = entity.address;
-                    hotel.city = entity.city;
-                    hotel.pincode = entity.pincode;
-                    hotel.contactPerson = entity.contactPerson;
-                    hotel.contactNumber = entity.contactNumber;
-                    hotel.createdBy = entity.createdBy;
-                    hotel.createDate = entity.createDate;
-                    hotel.updatedBy = entity.updatedBy;
-                    hotel.updateDate = entity.updateDate;
-                    hotel.facebook = entity.facebook;
-                    hotel.Twitter = entity.Twitter;
-                    hotel.isActive = entity.isActive;
-                    hotel.website = entity.website;
+                    Hotel hotel = Mapper.Map<Hotel>(entity);
+                    
 
                     return hotel;
                 }
