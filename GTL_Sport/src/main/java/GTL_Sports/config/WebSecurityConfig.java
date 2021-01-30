@@ -1,4 +1,4 @@
-package GTL_Sports.security;
+package GTL_Sports.config;
 
 
 import javax.sql.DataSource;

@@ -5,8 +5,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
-import GTL_Sports.domain.User;
-import GTL_Sports.repository.UserRepository;
+import GTL_Sports.domain.user.*;
+import GTL_Sports.repository.user.*;
 
 public class CustomUserDetailsService implements UserDetailsService {
 	 

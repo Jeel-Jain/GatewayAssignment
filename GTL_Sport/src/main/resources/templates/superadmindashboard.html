@@ -18,36 +18,13 @@
         </form>
     </div>
    
-    <div>
-        <h1>List of Admins</h1>
-    </div>
-     
-    <div>
-        <table class="table table-striped table-bordered">
-            <thead class="thead-dark">
-                <tr>
-                    <th>User ID</th>
-                    <th>E-mail</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                     <th>Contact Number</th>
-                      <th>User Role</th>
-                      <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr th:each="user: ${listUsers}">
-                    <td th:text="${user.id}">User ID</td>
-                    <td th:text="${user.email}">E-mail</td>
-                    <td th:text="${user.fname}">First Name</td>
-                    <td th:text="${user.lname}">Last Name</td>
-                     <td th:text="${user.contact}">Contact Number</td>
-                      <td th:text="${user.role}">Role</td>
-                      <td><input type="button" value="Approve" class="btn btn-success"/> <input type="button" value="Reject" class="btn btn-danger" /></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+   
+   <input type="button" onclick="location.href='/manageAdmins'" value="Manage Admins" class="btn btn-success"/><br>
+        <input type="button" onclick="location.href='/manageBookings'" value="Manage Bookings" class="btn btn-success"/><br>
+     <input type="button" onclick="location.href='/addVenues'" value="Add Venues" class="btn btn-success"/><br>
+  
+  
+  
 </div>
 </body>
 </html>

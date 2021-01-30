@@ -1,4 +1,4 @@
-package GTL_Sports.domain;
+package GTL_Sports.domain.user;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -21,8 +21,17 @@ private Long id;
 	private String contact;
 	private String password;
 	private String role;
+	private int isapprove;
+	
 	
 
+
+public int getIsapprove() {
+		return isapprove;
+	}
+	public void setIsapprove(int isapprove) {
+		this.isapprove = isapprove;
+	}
 public String getFname() {
 		return fname;
 	}

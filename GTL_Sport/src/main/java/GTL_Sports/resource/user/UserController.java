@@ -1,4 +1,4 @@
-package GTL_Sports.resource;
+package GTL_Sports.resource.user;
 
 import java.util.List;
 
@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
-import GTL_Sports.domain.User;
-import GTL_Sports.repository.UserRepository;
+import GTL_Sports.domain.user.*;
+import GTL_Sports.repository.user.*;
 import GTL_Sports.service.CustomUserDetails;
 
 @Controller
@@ -45,17 +45,19 @@ public class UserController{
 	@PostMapping("/process_register")
 	public String processRegister(User user) {
 	    
-		 BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-		    String encodedPassword = passwordEncoder.encode(user.getPassword());
+		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+		String encodedPassword = passwordEncoder.encode(user.getPassword());
 		    
 		     
-		userRepo.save(user);
+	
 	    user.setFname(user.getFname());
 	    user.setLname(user.getLname());
 	    user.setEmail(user.getEmail());
 	    user.setRole("Admin");
 	    user.setPassword(encodedPassword);
 	    user.setContact(user.getContact());
+	    user.setIsapprove(0);
+	   
 	    userRepo.save(user);
 	     
 	    return "register_success";
@@ -68,7 +70,7 @@ public class UserController{
 	}
 	
 	@GetMapping("/users")
-	public String listUsers(Model model) {
+	public String redirectToAdmin(Model model) {
 		
 		org.springframework.security.core.Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         CustomUserDetails userDetails = (CustomUserDetails)auth.getPrincipal();
@@ -76,21 +78,26 @@ public class UserController{
         System.out.println(Usrname);
         
         User userData = userRepo.findByEmail(Usrname);
-       System.out.println(userData.getRole());
-      
-       if(userData.getRole().equals("User"))
+        System.out.println(userData.getRole());
+     
+       if(userData.getRole().equals("SuperAdmin"))
        {
-    	   return "userdashboard";
+    	  
+    	   return "redirect:superadminView";
+       	    	     
+       	  
+       }
+       else if(userData.getIsapprove()==1 && userData.getRole().equals("Admin"))
+       {
+    	  return "redirect:adminView";
+    
        }
        else
        {
-    	  
-    	List<User> listUsers = userRepo.findAll();
-   	    model.addAttribute("listUsers", listUsers);
-   	    
-   	     
-   	    return "superadmindashboard";
+    	   return "index";
        }
+       
+      
 	   
 	}
 
