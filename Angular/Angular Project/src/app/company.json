@@ -63,7 +63,7 @@
       "totalEmployee": "15",
       "address": "motera",
       "isCompanyActive": "YES",
-      "totalBranch": 2,
+      "totalBranch": 4,
       "companyBranch": [
         {
           "branchid": "1",
@@ -74,9 +74,214 @@
           "branchid": "2",
           "branchname": "fcdfcdf",
           "branchaddress": "dfdf"
+        },
+        {
+          "branchid": "3",
+          "branchname": "jeel",
+          "branchaddress": "kandivali"
+        },
+        {
+          "branchid": "4",
+          "branchname": "sagar",
+          "branchaddress": "motera"
         }
       ],
       "id": 3
+    },
+    {
+      "name": "Ambuja ",
+      "totalBranch": 8,
+      "companyBranch": [
+        {
+          "branchid": "1",
+          "branchname": "fsdfsfgdfg",
+          "branchaddress": "dfgdfgdfgdf"
+        },
+        {
+          "branchid": "2",
+          "branchname": "fdsfdsfgdfs",
+          "branchaddress": "gdsfgdsfg"
+        },
+        {
+          "branchid": "3",
+          "branchname": "ff",
+          "branchaddress": "ff"
+        },
+        {
+          "branchid": "4",
+          "branchname": "vcv",
+          "branchaddress": "gg"
+        },
+        {
+          "branchid": "5",
+          "branchname": "efefef",
+          "branchaddress": "efeff"
+        },
+        {
+          "branchid": "6",
+          "branchname": "fgdfgdfgdf",
+          "branchaddress": "fdgdfg"
+        },
+        {
+          "branchid": "7",
+          "branchname": "bfghfg",
+          "branchaddress": "hfghfghfg"
+        },
+        {
+          "branchid": "8",
+          "branchname": "kjlk",
+          "branchaddress": "j"
+        }
+      ],
+      "id": 6,
+      "email": "ambhuja@gmail.com",
+      "totalEmployee": "6",
+      "address": "ahmedabad",
+      "isCompanyActive": "YES"
+    },
+    {
+      "name": "Kesari",
+      "totalBranch": 1,
+      "companyBranch": [
+        {
+          "branchid": "1",
+          "branchname": "fsfgdfgdfg",
+          "branchaddress": "dfgdsfgdfg"
+        }
+      ],
+      "id": 7,
+      "email": "kesari@ch.cj",
+      "address": "motera",
+      "totalEmployee": "4",
+      "isCompanyActive": "YES"
+    },
+    {
+      "name": "infosys",
+      "totalBranch": "1",
+      "companyBranch": [
+        {
+          "branchid": "1",
+          "branchname": "dd",
+          "branchaddress": "africa"
+        }
+      ],
+      "id": 8,
+      "email": "infio@gmail.com",
+      "totalEmployee": "677",
+      "address": "Africa",
+      "isCompanyActive": "YES"
+    },
+    {
+      "name": "infosys",
+      "totalBranch": "1",
+      "companyBranch": [
+        {
+          "branchid": "1",
+          "branchname": "dd",
+          "branchaddress": "africa"
+        }
+      ],
+      "id": 9,
+      "email": "infio@gmail.com",
+      "totalEmployee": "677",
+      "address": "Africa",
+      "isCompanyActive": "YES"
+    },
+    {
+      "name": "infosys",
+      "totalBranch": "1",
+      "companyBranch": [
+        {
+          "branchid": "1",
+          "branchname": "dd",
+          "branchaddress": "africa"
+        }
+      ],
+      "id": 10,
+      "email": "infio@gmail.com",
+      "totalEmployee": "677",
+      "address": "Africa",
+      "isCompanyActive": "YES"
+    },
+    {
+      "name": "infosys",
+      "totalBranch": "1",
+      "companyBranch": [
+        {
+          "branchid": "1",
+          "branchname": "dd",
+          "branchaddress": "africa"
+        }
+      ],
+      "id": 11,
+      "email": "infio@gmail.com",
+      "totalEmployee": "677",
+      "address": "Africa",
+      "isCompanyActive": "YES"
+    },
+    {
+      "name": "infosys",
+      "totalBranch": "1",
+      "companyBranch": [
+        {
+          "branchid": "1",
+          "branchname": "dd",
+          "branchaddress": "africa"
+        }
+      ],
+      "id": 12,
+      "email": "infio@gmail.com",
+      "totalEmployee": "677",
+      "address": "Africa",
+      "isCompanyActive": "YES"
+    },
+    {
+      "name": "infosys",
+      "totalBranch": "1",
+      "companyBranch": [
+        {
+          "branchid": "1",
+          "branchname": "dd",
+          "branchaddress": "africa"
+        }
+      ],
+      "id": 13,
+      "email": "infio@gmail.com",
+      "totalEmployee": "677",
+      "address": "Africa",
+      "isCompanyActive": "YES"
+    },
+    {
+      "name": "infosys",
+      "totalBranch": "1",
+      "companyBranch": [
+        {
+          "branchid": "1",
+          "branchname": "dd",
+          "branchaddress": "africa"
+        }
+      ],
+      "id": 14,
+      "email": "infio@gmail.com",
+      "totalEmployee": "677",
+      "address": "Africa",
+      "isCompanyActive": "YES"
+    },
+    {
+      "name": "infosys",
+      "totalBranch": "1",
+      "companyBranch": [
+        {
+          "branchid": "1",
+          "branchname": "dd",
+          "branchaddress": "africa"
+        }
+      ],
+      "id": 15,
+      "email": "infio@gmail.com",
+      "totalEmployee": "677",
+      "address": "Africa",
+      "isCompanyActive": "YES"
     }
   ]
 }

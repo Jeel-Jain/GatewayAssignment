@@ -31,27 +31,33 @@
                         </div>
 
                         <div class="card-body">
-                                <form #myform="ngForm" ngNativeValidate>
+                                <form  #myform="ngForm" novalidate >
                             <div class="m-3">
                                 <div class="form-group row">
                                     <label class="col-4 col-form-label">Name : </label>
                                     <div class="col-8">
-                                        <input type="text" class="form-control"  name="name"  [(ngModel)]="companyobj.name" ng-required="true" />
+                                        <input type="text"  class="form-control"  name="name"  [(ngModel)]="companyobj.name" required />
+                                        <div *ngIf="myform.controls.name.invalid" style="color: red">Required</div>
                                     </div>
+                                   
       
                                 </div>
                                  
                                  <div class="form-group row">
                                     <label class="col-4 col-form-label">Email : </label>
                                     <div class="col-8">
-                                        <input type="text" class="form-control" name="email" [(ngModel)]="companyobj.email" />
+                                        <input type="email" class="form-control" name="email" [(ngModel)]="companyobj.email" email  #email="ngModel" required/>
+                                        <div *ngIf="email.errors?.email" style="color: red"> 
+                                             Email Id Not valid.
+                                       </div> 
                                     </div>
                                 </div>
                                  
                                  <div class="form-group row">
                                     <label class="col-4 col-form-label">Total-Employee : </label>
                                     <div class="col-8">
-                                        <input type="text" class="form-control" name="totalEmployee"  [(ngModel)]="companyobj.totalEmployee" />
+                                        <input type="text" class="form-control" name="totalEmployee" type="number" [(ngModel)]="companyobj.totalEmployee"  required/>
+                                        <div *ngIf="myform.controls.totalEmployee.invalid" style="color: red">Required</div>
                                     </div>
                                 </div>
                                  
@@ -59,17 +65,19 @@
                                   <div class="form-group row">
                                     <label class="col-4 col-form-label">Address : </label>
                                     <div class="col-8">
-                                        <input type="text"  class="form-control"  name="address" [(ngModel)]='companyobj.address' />
+                                        <input type="text"  class="form-control"  name="address" [(ngModel)]='companyobj.address' required />
+                                        <div *ngIf="myform.controls.address.invalid" style="color: red">Required</div>
                                     </div>
                                 </div>
                                  
                                 <div class="form-group row">
                                     <label class="col-4 col-form-label">IsCompanyActive ? : </label>
                                     <div class="col-8">
-                                        <select class="form-control"  name="isCompanyActive"  [(ngModel)]='companyobj.isCompanyActive' >
+                                        <select class="form-control"  name="isCompanyActive"  [(ngModel)]='companyobj.isCompanyActive' required>
                                             <option>YES</option>
                                             <option>NO</option>
                                         </select>
+                                        <div *ngIf="myform.controls.isCompanyActive.invalid" style="color: red">Required</div>
                                     </div>
                                 </div>
 
@@ -84,32 +92,40 @@
 
                                
                                 <div class="form-group row">
-                                    <span class="col-md-4">
+                                    <span class="col-md-3">
                                         <label class="col-12 col-form-label">Branch Id : </label>
                                         <div class="col-12">
                                             <input type="text"  class="form-control" name="branchId{{i}}"  [(ngModel)]='obj.branchid' />
                                         </div>
                                     </span>
                                 
-                                    <span class="col-md-4">
+                                    <span class="col-md-3">
                                     <label class="col-12 col-form-label">Branch Name : </label>
                                     <div class="col-12">
                                         <input type="text"  class="form-control"  name="branchName{{i}}" [(ngModel)]='obj.branchname' />
                                     </div>
                                     </span>
 
-                                    <span class="col-md-4">
+                                    <span class="col-md-3">
                                     <label class="col-12 col-form-label">Branch Address : </label>
                                     <div class="col-12">
                                         <input type="text"  class="form-control" name="branchaddress{{i}}" [(ngModel)]="obj.branchaddress"  />
                                     </div>
+                                    </span>
+                                    
+                                    <span class="col-md-3  col-form-label" *ngIf='i!=0'>
+                                       
+                                        <div class="row" style="margin-top: 30px;">
+                                            <button class="btn " style="background-color: brown;font-weight: bold;color: white;" (click)="removeBranch(i)" ><i class="fas fa-trash-alt"></i> Delete</button>
+                                          
+                                        </div>
                                     </span>
                                 </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-12">
                                           
-                                    <button class="btn" style="background-color: brown;font-weight: bold;color: white;" (click)="AddMore()" ><i class="fas fa-plus"></i> Add More Branch</button>
+                                    <button class="btn" style="background-color: darkgreen;font-weight: bold;color: white;" (click)="AddMore()" ><i class="fas fa-plus"></i> Add More Branch</button>
                                           
                                     </div>
                                 </div>
@@ -117,7 +133,7 @@
                                  <div class="form-group row">
                                     <div class="col-12">
                                           
-                                    <input type="button" class="btn btn-dark btn-lg btn-block" (click)="AddCompany(myform.value)" value="Add Details">
+                                    <input type="button" class="btn btn-dark btn-lg btn-block" [disabled]='myform.invalid' (click)="AddCompany(myform.value)" value="Add Details">
                                           
                                     </div>
                                 </div>

@@ -2,7 +2,7 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { WebapiService } from 'src/app/webapi.service';
 import { Router } from '@angular/router';
 import{Branch} from '../../branch.model'
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-add',
@@ -10,13 +10,14 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./add.component.css']
 })
 export class AddComponent implements OnInit,AfterViewInit{
+
  
   ngAfterViewInit(): void {
    
   }
-
-  constructor(private service:WebapiService,private router:Router) { }
-
+ 
+  constructor(private service:WebapiService,private router:Router,private formbuilder:FormBuilder) { }
+ 
   branch=new Branch();
   branchArray=[] as  any;
 
@@ -31,15 +32,7 @@ export class AddComponent implements OnInit,AfterViewInit{
      "companyBranch":[]
 
   }
-  heroForm = new FormGroup({
-    name: new FormControl(this.companyobj.name, [
-      Validators.required,
-      Validators.minLength(4),
-     // <-- Here's how you pass in the custom validator.
-    ]),
 
-  });
-  get name() { return this.heroForm.get('name'); }
 
   companydata:any;
   ngOnInit(){
@@ -52,7 +45,9 @@ export class AddComponent implements OnInit,AfterViewInit{
       this.isEdit=true;
     })
 
+
   }
+
   AddCompany(formobj: any)
   {
     console.log(this.branchArray);
@@ -70,12 +65,17 @@ export class AddComponent implements OnInit,AfterViewInit{
     this.service.createCompany(data).subscribe(res=>{
       alert("Added Successfully.")
       setTimeout(() => {
-        this.router.navigate(['/index']);
+        this.router.navigate(['/index']).then(() => {
+          window.location.reload();
+        });
       }, 1000);
       this.getLatestDetails();
     })
   }
 
+  removeBranch(index:number){
+    this.branchArray.splice(index,index);
+  }
   getLatestDetails(){
     this.service.getAllCompany().subscribe(res=>{
       this.companydata=res;
@@ -84,6 +84,7 @@ export class AddComponent implements OnInit,AfterViewInit{
   });
   
 }
+
 
 AddMore()
 {
