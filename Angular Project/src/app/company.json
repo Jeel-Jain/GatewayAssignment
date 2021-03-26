@@ -1,0 +1,82 @@
+{
+  "Company": [
+    {
+      "email": "BJ1801@gmail.com",
+      "name": "BJ Group",
+      "totalEmployee": "100",
+      "address": "Ahmedabad",
+      "isCompanyActive": "YES",
+      "totalBranch": 4,
+      "companyBranch": [
+        {
+          "branchid": "1",
+          "branchname": "BJ consultancy",
+          "branchaddress": "Mumbai"
+        },
+        {
+          "branchid": "2",
+          "branchname": "BJ info",
+          "branchaddress": "Pune"
+        },
+        {
+          "branchid": "3",
+          "branchname": "BJ Logistics",
+          "branchaddress": "Banglore"
+        },
+        {
+          "branchid": "4",
+          "branchname": "BJ Magnify",
+          "branchaddress": "Nikol"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "email": "gateway@gmail.com",
+      "name": "gateway group",
+      "totalEmployee": "500",
+      "address": "ahmedabad",
+      "isCompanyActive": "YES",
+      "totalBranch": 3,
+      "companyBranch": [
+        {
+          "branchid": "1",
+          "branchname": "gateway digital",
+          "branchaddress": "surat"
+        },
+        {
+          "branchid": "2",
+          "branchname": "autofacet",
+          "branchaddress": "vadodara"
+        },
+        {
+          "branchid": "3",
+          "branchname": "dilx",
+          "branchaddress": "mumbai"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "email": "jeeljain1998@gmail.com",
+      "name": "Jeel Jain",
+      "totalEmployee": "15",
+      "address": "motera",
+      "isCompanyActive": "YES",
+      "totalBranch": 2,
+      "companyBranch": [
+        {
+          "branchid": "1",
+          "branchname": "fsgdf",
+          "branchaddress": "fgdfgd"
+        },
+        {
+          "branchid": "2",
+          "branchname": "fcdfcdf",
+          "branchaddress": "dfdf"
+        }
+      ],
+      "id": 3
+    }
+  ]
+}

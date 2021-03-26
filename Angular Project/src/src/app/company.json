@@ -1,0 +1,36 @@
+{
+  "Company": [
+    {
+      "id": 3,
+      "email": "jeeljain1998@gmail.com",
+      "name": "Jeel Jain",
+      "totalEmployee": "500s",
+      "address": "motera",
+      "isCompanyActive": "YES",
+      "totalBranch": "7",
+      "companyBranch": [
+        {
+          "branchId": "13s",
+          "branchName": "abc",
+          "address": "wfew3"
+        }
+      ]
+    },
+    {
+      "email": "ghfghfg",
+      "name": "bhargav",
+      "totalEmployee": "hfghfgh",
+      "address": "fghfgh",
+      "isCompanyActive": "YES",
+      "totalBranch": "6",
+      "companyBranch": [
+        {
+          "branchId": "hgfhfgh",
+          "branchName": "autofacets",
+          "address": "ghfghfgh"
+        }
+      ],
+      "id": 5
+    }
+  ]
+}
