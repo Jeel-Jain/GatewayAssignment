@@ -157,12 +157,17 @@
     },
     {
       "name": "infosys",
-      "totalBranch": "1",
+      "totalBranch": 2,
       "companyBranch": [
         {
           "branchid": "1",
           "branchname": "dd",
           "branchaddress": "africa"
+        },
+        {
+          "branchid": "2",
+          "branchname": "hnbf",
+          "branchaddress": "hjgh"
         }
       ],
       "id": 8,
