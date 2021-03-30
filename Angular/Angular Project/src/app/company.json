@@ -287,6 +287,37 @@
       "totalEmployee": "677",
       "address": "Africa",
       "isCompanyActive": "YES"
+    },
+    {
+      "email": "mj@hmai.ck",
+      "name": "mjjj",
+      "totalEmployee": "15",
+      "address": "motera",
+      "isCompanyActive": "YES",
+      "totalBranch": 4,
+      "companyBranch": [
+        {
+          "branchid": "1",
+          "branchname": "sdsd",
+          "branchaddress": "dwsds"
+        },
+        {
+          "branchid": "2",
+          "branchname": "ddd",
+          "branchaddress": "dd"
+        },
+        {
+          "branchid": "3",
+          "branchname": "dfsfsdfds",
+          "branchaddress": "fsdfsd"
+        },
+        {
+          "branchid": "4",
+          "branchname": "ffdfsd",
+          "branchaddress": "fvdfdf"
+        }
+      ],
+      "id": 16
     }
   ]
 }
